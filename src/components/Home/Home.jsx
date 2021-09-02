@@ -1,22 +1,13 @@
 import { useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
-import { Hero, HeroImage, Title, Intro } from "./Home.styles";
+import Hero from "./Hero/Hero";
+import { Intro } from "./Home.styles";
 import Projects from "./Projects/Projects";
 
 const Home = () => {
-  const { scrollY } = useViewportScroll();
-  const padding = useTransform(scrollY, [0, 100], [30, 0]);
   return (
     <div>
-      <Hero style={{ padding }}>
-        <HeroImage>
-          <Image src="/bg.jpg" layout="fill" alt="Sara Acevedo - Front End Developer" />
-        </HeroImage>
-        <Title>
-          <h1>Sara Acevedo</h1>
-          <h2>Front End Developer</h2>
-        </Title>
-      </Hero>
+      <Hero />
       <Intro>
         <div>
           <h2>My Approach</h2>
