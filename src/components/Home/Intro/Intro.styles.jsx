@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Intro = styled.div`
+export const Section = styled.div`
   background: #c8b9ad;
   padding: 200px 30px;
 
