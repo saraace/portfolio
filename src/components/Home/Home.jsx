@@ -1,13 +1,14 @@
 import { useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
 import { Hero, HeroImage, Title, Intro } from "./Home.styles";
+import Projects from "./Projects/Projects";
 
 const Home = () => {
   const { scrollY } = useViewportScroll();
-  const x = useTransform(scrollY, [0, 100], [30, 0]);
+  const padding = useTransform(scrollY, [0, 100], [30, 0]);
   return (
     <div>
-      <Hero style={{ padding: x }}>
+      <Hero style={{ padding }}>
         <HeroImage>
           <Image src="/bg.jpg" layout="fill" alt="Sara Acevedo - Front End Developer" />
         </HeroImage>
@@ -18,7 +19,7 @@ const Home = () => {
       </Hero>
       <Intro>
         <div>
-          <h3>My Approach</h3>
+          <h2>My Approach</h2>
           <p>
             I am a determined problem solver with in-depth knowledge of the software lifecycle and design patterns. I
             consider understanding the big-picture of a project crucial while staying grounded in my skills and where I
@@ -30,6 +31,7 @@ const Home = () => {
           </p>
         </div>
       </Intro>
+      <Projects />
     </div>
   );
 };

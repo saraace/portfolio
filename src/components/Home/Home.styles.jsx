@@ -47,7 +47,7 @@ export const Intro = styled.div`
   div {
     max-width: 1050px;
     margin: 0 auto;
-    h3 {
+    h2 {
       text-align: center;
       text-transform: uppercase;
       font-family: "Inter", serif;
