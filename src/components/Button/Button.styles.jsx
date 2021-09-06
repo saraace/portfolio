@@ -13,9 +13,18 @@ export const ArrowButton = styled.button`
   padding: 0;
   cursor: pointer;
 
-  span {
-    margin: 0 10px 0 0;
-    transition: 0.3s all ease;
+  &.right {
+    span {
+      margin: 0 10px 0 0;
+      transition: 0.3s all ease;
+    }
+  }
+
+  &.left {
+    span {
+      margin: 0 0 0 10px;
+      transition: 0.3s all ease;
+    }
   }
 
   &:hover {
