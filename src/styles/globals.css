@@ -6,18 +6,28 @@ body,
   width: 100%; 
   height: 100%; 
   font-family: "Inter", serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  color: #2C2A27;
+  background: #edece7;
+  font-size: 16px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p { 
+  line-height: 1.5rem;
+  margin: 2rem 0;
+}
+
 .container {
   max-width: 1200px; 
   margin: 0 auto;
+  padding: 0 20px;
 }
