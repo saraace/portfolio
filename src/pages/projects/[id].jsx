@@ -4,7 +4,6 @@ import Project from "../../components/Project/Project";
 const ProjectPage = () => {
   return (
     <div>
-      <Header />
       <Project />
     </div>
   );
