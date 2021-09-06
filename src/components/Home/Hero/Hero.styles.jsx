@@ -8,7 +8,7 @@ export const Section = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1016px;
+  min-height: 800px;
 `;
 
 export const BgImage = styled.div`

@@ -39,17 +39,12 @@ export const Grid = styled.div`
   column-gap: 30px;
 `;
 
-export const ProjectBox = styled.div`
+export const ProjectBox = styled.a`
+  cursor: pointer;
   .image {
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-  }
-
-  a {
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
   }
 `;
 

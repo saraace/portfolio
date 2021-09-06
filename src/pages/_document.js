@@ -8,7 +8,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
+        <Head title="Sara Acevedo | Front End Engineer">
           <meta charSet="utf-8" />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

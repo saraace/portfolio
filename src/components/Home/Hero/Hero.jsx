@@ -4,7 +4,7 @@ import { Section, BgImage, Title } from "./Hero.styles";
 
 const Hero = () => {
   const { scrollY } = useViewportScroll();
-  const padding = useTransform(scrollY, [0, 100], [30, 0]);
+  const padding = useTransform(scrollY, [0, 300], [30, 0]);
   return (
     <Section style={{ padding }}>
       <BgImage>
@@ -12,7 +12,7 @@ const Hero = () => {
       </BgImage>
       <Title>
         <h1>Sara Acevedo</h1>
-        <h2>Front End Developer</h2>
+        <h2>Front End Engineer</h2>
       </Title>
     </Section>
   );

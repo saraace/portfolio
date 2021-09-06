@@ -1,19 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../../Button/Button";
 import { Flex, Grid, ProjectBox, ProjectName, Section, Technologies } from "./Projects.styles";
 
 const Project = () => {
   return (
-    <ProjectBox>
-      <div className="image">
-        <Image src="/placeholder.jpg" layout="fill" alt="project" />
-      </div>
-      <Technologies>React</Technologies>
-      <ProjectName>Sample Project Name</ProjectName>
-      <Link href="/projects/1">
-        <a>Read More</a>
-      </Link>
-    </ProjectBox>
+    <Link href="/" passHref>
+      <ProjectBox>
+        <div className="image">
+          <Image src="/placeholder.jpg" layout="fill" alt="project" />
+        </div>
+        <Technologies>React</Technologies>
+        <ProjectName>Sample Project Name</ProjectName>
+        <Button text="Read More" />
+      </ProjectBox>
+    </Link>
   );
 };
 
@@ -25,7 +26,9 @@ const Projects = () => {
         <Flex>
           <div className="subtitle">Some Description Text</div>
           <Link href="/projects">
-            <a>All Projects</a>
+            <a>
+              <Button text="All Projects" />
+            </a>
           </Link>
         </Flex>
         <Grid>
