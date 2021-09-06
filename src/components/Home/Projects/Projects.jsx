@@ -1,14 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Button from "../../Button/Button";
 import { Flex, Grid, ProjectBox, ProjectName, Section, Technologies } from "./Projects.styles";
 
 const Project = () => {
   return (
-    <Link href="/" passHref>
-      <ProjectBox>
+    <Link href="/projects/1" passHref>
+      <ProjectBox initial="initial" animate="animate" whileHover="hover">
         <div className="image">
-          <Image src="/placeholder.jpg" layout="fill" alt="project" />
+          <motion.div
+            variants={{ initial: { scale: 1 }, hover: { scale: 1.1 } }}
+            transition={{ bounce: 0, duration: 0.8, ease: "easeInOut" }}
+          >
+            <Image src="/placeholder.jpg" layout="fill" alt="project" />
+          </motion.div>
         </div>
         <Technologies>React</Technologies>
         <ProjectName>Sample Project Name</ProjectName>

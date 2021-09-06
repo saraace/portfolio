@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const Section = styled.div`
   padding: 100px 0;
@@ -39,12 +40,23 @@ export const Grid = styled.div`
   column-gap: 30px;
 `;
 
-export const ProjectBox = styled.a`
+export const ProjectBox = styled(motion.a)`
   cursor: pointer;
+  display: block;
+
   .image {
     position: relative;
     width: 100%;
     padding-bottom: 100%;
+    overflow: hidden;
+
+    & > div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 `;
 
