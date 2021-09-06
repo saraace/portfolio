@@ -33,7 +33,7 @@ const Projects = ({ projects }) => {
       <div className="container">
         <h2>Projects</h2>
         <Flex>
-          <div className="subtitle">What I've been working on lately...</div>
+          <div className="subtitle">What I&apos;ve been working on lately...</div>
           <Link href="/projects">
             <a>
               <Button text="All Projects" />

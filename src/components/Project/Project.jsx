@@ -19,7 +19,7 @@ const Project = ({ featuredImage, title, tags, content, postFields }) => {
       </Back>
       <Flex>
         <Images>
-          <Image src={featuredImage.node.sourceUrl} width="500" height="400" alt="Project" />
+          <Image src={featuredImage?.node.sourceUrl} width="500" height="400" alt="Project" />
         </Images>
         <Description>
           <Title>{title}</Title>
@@ -27,7 +27,7 @@ const Project = ({ featuredImage, title, tags, content, postFields }) => {
             <Tags {...{ tags }} />
           </Technologies>
           <ProjectLinks>
-            {postFields.link && (
+            {postFields?.link && (
               <div>
                 <FontAwesomeIcon icon={faLink} />
                 <a href={postFields.link.url} target="_blank" rel="noreferrer">
@@ -35,7 +35,7 @@ const Project = ({ featuredImage, title, tags, content, postFields }) => {
                 </a>
               </div>
             )}
-            {postFields.github && (
+            {postFields?.github && (
               <div>
                 <FontAwesomeIcon icon={faGithub} />
                 <a href={postFields.github.url} target="_blank" rel="noreferrer">
