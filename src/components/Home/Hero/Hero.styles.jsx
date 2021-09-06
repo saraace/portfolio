@@ -9,6 +9,7 @@ export const Section = styled(motion.div)`
   justify-content: center;
   align-items: center;
   min-height: 800px;
+  background: #fff;
 `;
 
 export const BgImage = styled.div`
