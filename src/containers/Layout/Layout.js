@@ -1,5 +1,5 @@
 import { useRouter } from "next/dist/client/router";
-import Header from "../../components/Header/Header";
+import Header from "./Header/Header";
 
 const Layout = ({ children }) => {
   const router = useRouter();
