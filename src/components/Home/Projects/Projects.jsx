@@ -2,35 +2,38 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Button from "../../Button/Button";
+import Tags from "../../Tags/Tags";
 import { Flex, Grid, ProjectBox, ProjectName, Section, Technologies } from "./Projects.styles";
 
-const Project = () => {
+const Project = ({ title, slug, featuredImage, tags }) => {
   return (
-    <Link href="/projects/1" passHref>
+    <Link href={`/projects/${slug}`} passHref>
       <ProjectBox initial="initial" animate="animate" whileHover="hover">
         <div className="image">
           <motion.div
             variants={{ initial: { scale: 1 }, hover: { scale: 1.1 } }}
             transition={{ bounce: 0, duration: 0.8, ease: "easeInOut" }}
           >
-            <Image src="/placeholder.jpg" layout="fill" alt="project" />
+            <Image src={featuredImage.node.sourceUrl} layout="fill" alt="project" />
           </motion.div>
         </div>
-        <Technologies>React</Technologies>
-        <ProjectName>Sample Project Name</ProjectName>
+        <Technologies>
+          <Tags {...{ tags }} />
+        </Technologies>
+        <ProjectName>{title}</ProjectName>
         <Button text="Read More" />
       </ProjectBox>
     </Link>
   );
 };
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   return (
     <Section>
       <div className="container">
         <h2>Projects</h2>
         <Flex>
-          <div className="subtitle">Some Description Text</div>
+          <div className="subtitle">What I've been working on lately...</div>
           <Link href="/projects">
             <a>
               <Button text="All Projects" />
@@ -38,9 +41,9 @@ const Projects = () => {
           </Link>
         </Flex>
         <Grid>
-          {[...Array(3)].map((project, i) => (
+          {projects.map((project, i) => (
             <div key={i}>
-              <Project />
+              <Project {...project} />
             </div>
           ))}
         </Grid>
