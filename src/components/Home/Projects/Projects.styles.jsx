@@ -24,21 +24,40 @@ export const Section = styled.div`
 
 export const Flex = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 
   a {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 2px;
+    margin: 20px 0 0;
+
+    @media (min-width: 576px) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin: 50px 0 0;
-  column-gap: 30px;
+  row-gap: 30px;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const ProjectBox = styled(motion.a)`

@@ -29,11 +29,25 @@ export const Title = styled.div`
 
   h1 {
     font-family: "Playfair Display", serif;
-    font-size: 100px;
+    font-size: 70px;
     font-style: italic;
     font-weight: 400;
-    margin: 0;
+    line-height: 0.9em;
+    margin: 0 30px 30px;
+
+    @media (min-width: 576px) {
+      font-size: 80px;
+      line-height: 1em;
+      margin: 0 0 20px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 100px;
+      line-height: 1em;
+      margin: 0 0 10px;
+    }
   }
+
   h2 {
     font-family: "Inter", serif;
     text-transform: uppercase;
