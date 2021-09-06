@@ -24,6 +24,7 @@ export const Links = styled.div`
     padding: 0;
     list-style: none;
     display: flex;
+    align-items: center;
 
     li {
       margin: 0 0 0 20px;
@@ -32,8 +33,12 @@ export const Links = styled.div`
         display: block;
         font-family: "Inter", serif;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 0.75rem;
         letter-spacing: 2px;
+
+        &.icon {
+          font-size: 1.1rem;
+        }
       }
     }
   }

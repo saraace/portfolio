@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Nav, Links } from "./Header.styles";
 
 const Header = () => {
@@ -20,6 +22,16 @@ const Header = () => {
             <Link href="/projects">
               <a>Projects</a>
             </Link>
+          </li>
+          <li>
+            <a href="https://github.com/saraace" target="_blank" className="icon">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/saraacevedo/" target="_blank" className="icon">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
           </li>
         </ul>
       </Links>
