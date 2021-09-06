@@ -35,8 +35,29 @@ export const Title = styled.div`
     margin: 0;
   }
   h2 {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", serif;
+    text-transform: uppercase;
+    font-size: 1.2rem;
     font-weight: 300;
+    letter-spacing: 2px;
     margin: 0;
+  }
+`;
+
+export const Links = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 20px 0;
+
+  a {
+    display: block;
+    padding: 0 10px;
+    transition: 0.3s all ease;
+
+    &:hover {
+      color: #2c2a27;
+    }
   }
 `;

@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useTransform, useViewportScroll } from "framer-motion";
 import Image from "next/image";
-import { Section, BgImage, Title } from "./Hero.styles";
+import { Section, BgImage, Title, Links } from "./Hero.styles";
 
 const Hero = () => {
   const { scrollY } = useViewportScroll();
@@ -13,6 +15,14 @@ const Hero = () => {
       <Title>
         <h1>Sara Acevedo</h1>
         <h2>Front End Engineer</h2>
+        <Links>
+          <a href="https://github.com/saraace" target="_blank">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://www.linkedin.com/in/saraacevedo/" target="_blank">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+        </Links>
       </Title>
     </Section>
   );
