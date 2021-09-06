@@ -1,7 +1,10 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/pro-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
-import { Flex, Back, Images, Description, Title, Technologies, Content } from "./Project.styles";
+import { Flex, Back, Images, Description, Title, Technologies, ProjectLinks, Content } from "./Project.styles";
 
 const Project = () => {
   return (
@@ -19,7 +22,21 @@ const Project = () => {
         </Images>
         <Description>
           <Title>Sample Project</Title>
-          <Technologies>React</Technologies>
+          <Technologies>React, NextJS, Framer Motion, Theme UI</Technologies>
+          <ProjectLinks>
+            <div>
+              <FontAwesomeIcon icon={faLink} />
+              <a href="https://www.saraace.com" target="_blank">
+                https://www.saraace.com
+              </a>
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faGithub} />
+              <a href="https://github.com/saraace/portfolio" target="_blank">
+                https://github.com/saraace/portfolio
+              </a>
+            </div>
+          </ProjectLinks>
           <Content>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim sodales tellus ut facilisis.

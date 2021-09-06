@@ -28,7 +28,26 @@ export const Technologies = styled.div`
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
-  margin: 10px 0;
+  margin: 10px 0 30px;
+`;
+
+export const ProjectLinks = styled.div`
+  font-family: "Inter", serif;
+  font-size: 14px;
+
+  div {
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    svg {
+      margin: 0 10px 0 0;
+    }
+  }
 `;
 
 export const Content = styled.div``;
