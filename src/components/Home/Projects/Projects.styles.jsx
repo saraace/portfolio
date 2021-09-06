@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 export const Section = styled.div`
   padding: 100px 0;
-  background: #d5cec4;
+  background: #edece7;
+
   h2 {
     text-transform: uppercase;
     font-size: 16px;
