@@ -18,7 +18,7 @@ const Project = () => {
       </Back>
       <Flex>
         <Images>
-          <Image src="/placeholder.jpg" width="500" height="400" />
+          <Image src="/placeholder.jpg" width="500" height="400" alt="Project" />
         </Images>
         <Description>
           <Title>Sample Project</Title>
@@ -26,13 +26,13 @@ const Project = () => {
           <ProjectLinks>
             <div>
               <FontAwesomeIcon icon={faLink} />
-              <a href="https://www.saraace.com" target="_blank">
+              <a href="https://www.saraace.com" target="_blank" rel="noreferrer">
                 https://www.saraace.com
               </a>
             </div>
             <div>
               <FontAwesomeIcon icon={faGithub} />
-              <a href="https://github.com/saraace/portfolio" target="_blank">
+              <a href="https://github.com/saraace/portfolio" target="_blank" rel="noreferrer">
                 https://github.com/saraace/portfolio
               </a>
             </div>

@@ -1,10 +1,10 @@
-import { Flex, Image, Content } from "./About.styles";
+import { Flex, ImageContainer, Content } from "./About.styles";
 
 const About = () => {
   return (
     <div className="container">
       <Flex>
-        <Image></Image>
+        <ImageContainer />
         <Content>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim sodales tellus ut facilisis. Donec
