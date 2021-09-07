@@ -50,7 +50,7 @@ const Project = ({ featuredImage, title, tags, content, postFields }) => {
         <Images>
           <ProjectInfo className="mobile-title" {...{ title, tags, postFields }} />
           <ImageWrapper>
-            <Image src={featuredImage?.node.sourceUrl} alt="Project" layout="fill" />
+            <Image src={featuredImage?.node.sourceUrl} alt={title} layout="fill" />
           </ImageWrapper>
         </Images>
         <div>
