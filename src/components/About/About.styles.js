@@ -9,4 +9,13 @@ export const Flex = styled.div`
 `;
 export const ImageContainer = styled.div``;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 56px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 20px;
+  }
+`;
