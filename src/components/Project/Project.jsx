@@ -49,14 +49,17 @@ const Project = ({ featuredImage, title, tags, content, github, projectLink, ima
       <Flex>
         <Images>
           <ProjectInfo className="mobile-title" {...{ title, tags, github, projectLink }} />
-          <ImageWrapper>
-            <Image src={featuredImage?.node.sourceUrl} alt={title} layout="fill" />
-          </ImageWrapper>
-          {images.map((image, i) => (
-            <ImageWrapper key={i}>
-              <Image src={image} alt={title} layout="fill" />
+          {featuredImage && (
+            <ImageWrapper>
+              <Image src={featuredImage?.node.sourceUrl} alt={title} layout="fill" />
             </ImageWrapper>
-          ))}
+          )}
+          {images &&
+            images.map((image, i) => (
+              <ImageWrapper key={i}>
+                <Image src={image} alt={title} layout="fill" />
+              </ImageWrapper>
+            ))}
         </Images>
         <div>
           <ProjectInfo className="desktop-title" {...{ title, tags, github, projectLink }} />

@@ -9,14 +9,16 @@ const Project = ({ title, slug, featuredImage, tags }) => {
   return (
     <Link href={`/projects/${slug}`} passHref>
       <ProjectBox initial="initial" animate="animate" whileHover="hover">
-        <div className="image">
-          <motion.div
-            variants={{ initial: { scale: 1 }, hover: { scale: 1.1 } }}
-            transition={{ bounce: 0, duration: 0.8, ease: "easeInOut" }}
-          >
-            <Image src={featuredImage.node.sourceUrl} layout="fill" alt="project" />
-          </motion.div>
-        </div>
+        {featuredImage && (
+          <div className="image">
+            <motion.div
+              variants={{ initial: { scale: 1 }, hover: { scale: 1.1 } }}
+              transition={{ bounce: 0, duration: 0.8, ease: "easeInOut" }}
+            >
+              <Image src={featuredImage.node.sourceUrl} layout="fill" alt="project" />
+            </motion.div>
+          </div>
+        )}
         <Technologies>
           <Tags {...{ tags }} />
         </Technologies>
