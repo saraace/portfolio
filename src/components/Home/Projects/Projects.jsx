@@ -29,16 +29,16 @@ const Project = ({ title, slug, featuredImage, tags }) => {
 
 const Projects = ({ projects }) => {
   return (
-    <Section>
+    <Section id="projects">
       <div className="container">
         <h2>Projects</h2>
         <Flex>
           <div className="subtitle">What I&apos;ve been working on lately...</div>
-          <Link href="/projects">
+          {/* <Link href="/projects">
             <a>
               <Button text="All Projects" />
             </a>
-          </Link>
+          </Link> */}
         </Flex>
         <Grid>
           {projects.map((project, i) => (

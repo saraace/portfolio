@@ -40,7 +40,7 @@ const Project = ({ featuredImage, title, tags, content, github, projectLink, ima
   return (
     <div className="container">
       <Back>
-        <Link href="/projects">
+        <Link href="/#projects">
           <a>
             <Button text="Projects" direction="left" />
           </a>

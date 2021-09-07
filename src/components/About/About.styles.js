@@ -34,7 +34,7 @@ export const ImageWrapper = styled.div`
   }
 
   @media (min-width: 992px) {
-    flex: 0 0 50%;
+    flex: 0 0 30%;
     padding: 0 20px 0 0;
   }
 `;
