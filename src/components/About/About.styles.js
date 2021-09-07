@@ -19,6 +19,7 @@ export const ImageWrapper = styled.div`
     max-width: 300px;
     margin: 0 auto !important;
     display: block;
+    background: #d5cec4;
 
     @media (min-width: 992px) {
       max-width: none;

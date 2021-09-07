@@ -8,14 +8,18 @@ export const Section = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 800px;
   background: #fff;
+
+  @media (min-width: 768px) {
+    min-height: 800px;
+  }
 `;
 
 export const BgImage = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  background: #c8b9ad;
 
   img {
     object-fit: cover;

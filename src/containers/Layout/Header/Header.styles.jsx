@@ -5,7 +5,8 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 50px;
+  flex-direction: column;
+  padding: 10px 20px;
   margin: 0 0 50px;
   border-bottom: 1px solid #d5cec4;
 
@@ -14,7 +15,16 @@ export const Nav = styled.nav`
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
-    margin: 0;
+    margin: 0 0 10px;
+
+    @media (min-width: 576px) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 576px) {
+    padding: 25px 50px;
+    flex-direction: row;
   }
 `;
 

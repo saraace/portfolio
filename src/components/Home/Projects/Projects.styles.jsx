@@ -65,9 +65,10 @@ export const ProjectBox = styled(motion.a)`
   display: block;
 
   .image {
+    background: #d5cec4;
     position: relative;
     width: 100%;
-    padding-bottom: 75%;
+    padding-bottom: 74%;
     overflow: hidden;
 
     & > div {
