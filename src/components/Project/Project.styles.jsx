@@ -2,6 +2,27 @@ import styled from "@emotion/styled";
 
 export const Flex = styled.div`
   display: flex;
+  flex-direction: column;
+
+  .mobile-title {
+    margin: 0 0 2rem;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  .desktop-title {
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 
 export const Back = styled.div`
@@ -9,10 +30,26 @@ export const Back = styled.div`
 `;
 
 export const Images = styled.div`
-  flex: 0 0 50%;
+  @media (min-width: 992px) {
+    flex: 0 0 50%;
+    padding: 0 20px 0 0;
+  }
 `;
 
-export const Description = styled.div``;
+export const ImageWrapper = styled.div`
+  width: 100%;
+
+  & > div {
+    position: unset !important;
+  }
+
+  img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+`;
 
 export const Title = styled.h2`
   font-family: "Playfair Display", serif;
@@ -49,5 +86,3 @@ export const ProjectLinks = styled.div`
     }
   }
 `;
-
-export const Content = styled.div``;
