@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
 import Tags from "../Tags/Tags";
-import { Flex, Back, Images, ImageWrapper, Title, Technologies, ProjectLinks, Content } from "./Project.styles";
+import { Flex, Back, Images, ImageWrapper, Title, Technologies, ProjectLinks } from "./Project.styles";
 
-const ProjectInfo = ({ className, title, tags, postFields }) => {
+const ProjectInfo = ({ className, title, tags, github, projectLink }) => {
   return (
     <div {...{ className }}>
       <Title>{title}</Title>
@@ -15,19 +15,19 @@ const ProjectInfo = ({ className, title, tags, postFields }) => {
         <Tags {...{ tags }} />
       </Technologies>
       <ProjectLinks>
-        {postFields?.link && (
+        {projectLink && (
           <div>
             <FontAwesomeIcon icon={faLink} />
-            <a href={postFields.link.url} target="_blank" rel="noreferrer">
-              {postFields.link.url}
+            <a href={projectLink} target="_blank" rel="noreferrer">
+              {projectLink}
             </a>
           </div>
         )}
-        {postFields?.github && (
+        {github && (
           <div>
             <FontAwesomeIcon icon={faGithub} />
-            <a href={postFields.github.url} target="_blank" rel="noreferrer">
-              {postFields.github.url}
+            <a href={github} target="_blank" rel="noreferrer">
+              {github}
             </a>
           </div>
         )}
@@ -36,7 +36,7 @@ const ProjectInfo = ({ className, title, tags, postFields }) => {
   );
 };
 
-const Project = ({ featuredImage, title, tags, content, postFields }) => {
+const Project = ({ featuredImage, title, tags, content, github, projectLink, images }) => {
   return (
     <div className="container">
       <Back>
@@ -48,13 +48,18 @@ const Project = ({ featuredImage, title, tags, content, postFields }) => {
       </Back>
       <Flex>
         <Images>
-          <ProjectInfo className="mobile-title" {...{ title, tags, postFields }} />
+          <ProjectInfo className="mobile-title" {...{ title, tags, github, projectLink }} />
           <ImageWrapper>
             <Image src={featuredImage?.node.sourceUrl} alt={title} layout="fill" />
           </ImageWrapper>
+          {images.map((image, i) => (
+            <ImageWrapper key={i}>
+              <Image src={image} alt={title} layout="fill" />
+            </ImageWrapper>
+          ))}
         </Images>
         <div>
-          <ProjectInfo className="desktop-title" {...{ title, tags, postFields }} />
+          <ProjectInfo className="desktop-title" {...{ title, tags, github, projectLink }} />
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </Flex>

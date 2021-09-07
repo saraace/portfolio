@@ -1,12 +1,15 @@
 import { gql } from "@apollo/client";
 
-export const getPost = (slug, preview, previewData) => {
+export const getPost = (slug) => {
   return gql`
   query PostBySlug {
     post(id: "${slug}", idType:SLUG) {
       title
       content
       slug
+      github
+      projectLink
+      images
       tags(where: {orderby: TERM_ID}) {
         nodes {
           name
@@ -15,14 +18,6 @@ export const getPost = (slug, preview, previewData) => {
       featuredImage {
         node {
           sourceUrl
-        }
-      }
-      postFields {
-        link {
-          url
-        }
-        github {
-          url
         }
       }
     }

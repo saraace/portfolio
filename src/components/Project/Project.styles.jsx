@@ -38,6 +38,7 @@ export const Images = styled.div`
 
 export const ImageWrapper = styled.div`
   width: 100%;
+  margin: 0 0 20px;
 
   & > div {
     position: unset !important;

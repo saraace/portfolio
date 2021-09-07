@@ -4,6 +4,7 @@ import { getAllPostSlugs } from "../../apollo/queries/posts";
 import Project from "../../components/Project/Project";
 
 const ProjectPage = ({ post }) => {
+  console.log(post);
   return (
     <div>
       <Project {...post} />
@@ -19,6 +20,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
     data: { post },
   } = await client.query({ query: getPost(params.slug, preview, previewData) });
 
+  console.log(post);
   return {
     props: { post },
   };
