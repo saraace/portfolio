@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
 import Tags from "../Tags/Tags";
-import { Flex, Back, Images, ImageWrapper, Title, Technologies, ProjectLinks } from "./Project.styles";
+import { Flex, Back, Images, ImageWrapper, Title, Technologies, ProjectLinks, Content } from "./Project.styles";
 
 const ProjectInfo = ({ className, title, tags, github, projectLink }) => {
   return (
@@ -49,11 +49,11 @@ const Project = ({ featuredImage, title, tags, content, github, projectLink, ima
       <Flex>
         <Images>
           <ProjectInfo className="mobile-title" {...{ title, tags, github, projectLink }} />
-          {featuredImage && (
+          {/* {featuredImage && (
             <ImageWrapper>
               <Image src={featuredImage?.node.sourceUrl} alt={title} layout="fill" />
             </ImageWrapper>
-          )}
+          )} */}
           {images &&
             images.map((image, i) => (
               <ImageWrapper key={i}>
@@ -63,7 +63,7 @@ const Project = ({ featuredImage, title, tags, content, github, projectLink, ima
         </Images>
         <div>
           <ProjectInfo className="desktop-title" {...{ title, tags, github, projectLink }} />
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <Content dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </Flex>
     </div>
