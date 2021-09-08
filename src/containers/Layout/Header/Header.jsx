@@ -24,12 +24,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a href="https://github.com/saraace" target="_blank" className="icon">
+            <a href={process.env.NEXT_PUBLIC_GITHUB} target="_blank" rel="noreferrer" className="icon">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/saraacevedo/" target="_blank" className="icon">
+            <a href={process.env.NEXT_PUBLIC_LINKEDIN} target="_blank" rel="noreferrer" className="icon">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </li>

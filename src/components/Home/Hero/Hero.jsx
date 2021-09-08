@@ -18,10 +18,10 @@ const Hero = () => {
         <h1>Sara Acevedo</h1>
         <h2>Front End Engineer</h2>
         <Links>
-          <a href="https://github.com/saraace" target="_blank" rel="noreferrer">
+          <a href={process.env.NEXT_PUBLIC_GITHUB} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://www.linkedin.com/in/saraacevedo/" target="_blank" rel="noreferrer">
+          <a href={process.env.NEXT_PUBLIC_LINKEDIN} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </Links>

@@ -13,5 +13,8 @@ export const getPage = (slug) => {
                 }
             }
         }
+        generalSettings {
+            resume
+        }
     } `;
 };
