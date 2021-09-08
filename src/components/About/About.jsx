@@ -25,12 +25,14 @@ const About = ({ content, featuredImage, resume }) => {
                 LinkedIn
               </a>
             </div>
-            <div>
-              <FontAwesomeIcon icon={faFileAlt} />
-              <a href={resume} target="_blank" rel="noreferrer" className="icon">
-                Resume
-              </a>
-            </div>
+            {resume && (
+              <div>
+                <FontAwesomeIcon icon={faFileAlt} />
+                <a href={resume} target="_blank" rel="noreferrer" className="icon">
+                  R&eacute;sum&eacute;
+                </a>
+              </div>
+            )}
           </Links>
         </Left>
         <Content>
