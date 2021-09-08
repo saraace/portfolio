@@ -88,3 +88,9 @@ export const ProjectLinks = styled.div`
     }
   }
 `;
+
+export const Content = styled.div`
+  a {
+    text-decoration: underline;
+  }
+`;

@@ -48,7 +48,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin: 50px 0 0;
-  row-gap: 30px;
+  row-gap: 70px;
 
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
@@ -68,7 +68,7 @@ export const ProjectBox = styled(motion.a)`
     background: #d5cec4;
     position: relative;
     width: 100%;
-    padding-bottom: 74%;
+    padding-bottom: 62.5%;
     overflow: hidden;
 
     & > div {
