@@ -8,7 +8,11 @@ const ProjectPage = ({ post }) => {
   return (
     <div>
       <Head>
-        <title>Sara Acevedo | Front End Engineer | {post.title}</title>
+        {post ? (
+          <title>Sara Acevedo | Front End Engineer | {post.title}</title>
+        ) : (
+          <title>Sara Acevedo | Front End Engineer</title>
+        )}
       </Head>
       <Project {...post} />
     </div>
