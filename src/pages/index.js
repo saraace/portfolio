@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { initializeApollo } from "../apollo";
 import { getPosts } from "../apollo/queries/posts";
 import Hero from "../components/Home/Hero/Hero";
@@ -7,6 +8,9 @@ import Projects from "../components/Home/Projects/Projects";
 const Index = ({ posts }) => {
   return (
     <div>
+      <Head>
+        <title>Sara Acevedo | Front End Engineer</title>
+      </Head>
       <Hero />
       <Intro />
       <Projects {...{ projects: posts }} />

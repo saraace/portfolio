@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { initializeApollo } from "../../apollo";
 import { getPost } from "../../apollo/queries/post";
 import { getAllPostSlugs } from "../../apollo/queries/posts";
@@ -6,6 +7,9 @@ import Project from "../../components/Project/Project";
 const ProjectPage = ({ post }) => {
   return (
     <div>
+      <Head>
+        <title>Sara Acevedo | Front End Engineer | {post.title}</title>
+      </Head>
       <Project {...post} />
     </div>
   );
