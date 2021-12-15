@@ -63,7 +63,7 @@ const Project = ({ thumbnail_image, title, technologies, content, github_link, p
 				</Images>
 				<div>
 					<ProjectInfo className="desktop-title" {...{ title, technologies, github_link, project_link }} />
-					<Content dangerouslySetInnerHTML={{ __html: content.html }} />
+					{content && <Content dangerouslySetInnerHTML={{ __html: content.html }} />}
 				</div>
 			</Flex>
 		</div>
