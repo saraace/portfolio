@@ -6,7 +6,6 @@ import Tags from "../../Tags/Tags";
 import { Flex, Grid, ProjectBox, ProjectName, Section, Technologies } from "./Projects.styles";
 
 const Project = ({ title, slug, thumbnail_image, tags }) => {
-	console.log(thumbnail_image);
 	return (
 		<Link href={`/projects/${slug}`} passHref>
 			<ProjectBox initial="initial" animate="animate" whileHover="hover">
