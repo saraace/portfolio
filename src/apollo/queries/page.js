@@ -1,20 +1,21 @@
 import { gql } from "@apollo/client";
 
 export const getPage = (slug) => {
-  return gql`
+	return gql`
     query PageQuery {
-        page(idType: URI, id: "${slug}") {
-            slug
-            content
+        page(where: {slug: "${slug}"}) {
+            id
             title
-            featuredImage {
-                node {
-                    sourceUrl
-                }
+            slug
+            content {
+              html
             }
-        }
-        generalSettings {
-            resume
-        }
+            featured_image {
+              url
+            }
+          }
+          settings(where: {key: "resume"}) {
+            value
+          }
     } `;
 };

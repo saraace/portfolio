@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.4.10",
+    "@babel/core": "^7.16.5",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@fortawesome/fontawesome-pro": "^5.15.4",

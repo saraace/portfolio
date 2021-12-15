@@ -6,29 +6,29 @@ import Intro from "../components/Home/Intro/Intro";
 import Projects from "../components/Home/Projects/Projects";
 
 const Index = ({ posts }) => {
-  return (
-    <div>
-      <Head>
-        <title>Sara Acevedo | Front End Engineer</title>
-      </Head>
-      <Hero />
-      <Intro />
-      <Projects {...{ projects: posts }} />
-    </div>
-  );
+	return (
+		<div>
+			<Head>
+				<title>Sara Acevedo | Front End Engineer</title>
+			</Head>
+			<Hero />
+			<Intro />
+			<Projects {...{ projects: posts }} />
+		</div>
+	);
 };
 
 export default Index;
 
 export async function getStaticProps() {
-  const client = initializeApollo();
-  const { data } = await client.query({
-    query: getPosts(),
-  });
+	const client = initializeApollo();
+	const { data } = await client.query({
+		query: getPosts()
+	});
 
-  return {
-    props: {
-      posts: data.posts.nodes,
-    },
-  };
+	return {
+		props: {
+			posts: data.projects
+		}
+	};
 }

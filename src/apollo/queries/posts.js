@@ -1,39 +1,28 @@
 import { gql } from "@apollo/client";
 
 export const getPosts = () => {
-  return gql`
-    query PostsQuery {
-      posts {
-        nodes {
-          slug
-          title
-          featuredImage {
-            node {
-              title
-              sourceUrl(size: _2048X2048)
-            }
-          }
-          tags(where: { orderby: TERM_ID }) {
-            nodes {
-              name
-            }
-          }
-        }
-      }
-    }
-  `;
+	return gql`
+		query PostsQuery {
+			projects(orderBy: createdAt_ASC) {
+				slug
+				title
+				thumbnail_image {
+					url
+				}
+				technologies {
+					title
+				}
+			}
+		}
+	`;
 };
 
 export const getAllPostSlugs = () => {
-  return gql`
-    query AllPostSlugsQuery {
-      posts(first: 1000) {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `;
+	return gql`
+		query AllPostSlugsQuery {
+			projects(first: 1000) {
+				slug
+			}
+		}
+	`;
 };
